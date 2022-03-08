@@ -118,10 +118,10 @@ ul li:nth-child(1)::before {
 
 @media screen and (max-width: 700px) {
     p {
-        font-size: 40px;
+        font-size: 20px;
         font-weight: 600;
         color: #333;
-        padding: 50px 100px 50px 30px;
+        padding: 20px 10px 20px 10px;
         text-align: center;
         
     }
@@ -129,6 +129,8 @@ ul li:nth-child(1)::before {
 
     .p2 {
         width: 80%;
+        font-size: 20px;
+        padding: 20px 10px 20px 10px;
     }
 
     
