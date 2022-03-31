@@ -609,7 +609,7 @@ border-radius: 15px;
  
 
 
-@media (max-width: 50git0px) {
+@media (max-width: 580px) {
     .header {
         margin: 0 auto;
         
@@ -621,7 +621,7 @@ border-radius: 15px;
     }
     
     h1 {
-        padding-left: 24px;
+        padding-left: 30px;
         font-size: 20px;
 
     
@@ -629,7 +629,7 @@ border-radius: 15px;
     
     h1::before {
 
-        left: 2%;
+        left: 2.3%;
         /* top: 20px; */
     }
     
@@ -640,7 +640,8 @@ border-radius: 15px;
     }
     
     .liWrapp {
-        width: 60%;
+        width: 50%;
+        padding-right: 30px;
     }
 
     
