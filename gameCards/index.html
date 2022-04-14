@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Wrapper">
+        <div class="imgDiv eggplant" id="card0"><img src="./eggplant.png" alt=""></div>
+        <div class="imgDiv apple" id="card1"><img src="./apple.png" alt=""></div>
+        <div class="imgDiv mushroom" id="card2"><img src="./mushroom-2.png" alt=""></div>
+        <div class="imgDiv onion" id="card3"><img src="./onion.png" alt=""></div>
+        <div class="imgDiv parsley" id="card4"><img src="./parsley.png" alt=""></div>
+        <!-- <div class="imgDiv cookie" id="card4"><img src="./cookie.png" alt=""></div> -->
+        <div class="imgDiv plum" id="card4"><img src="./plum.png" alt=""></div>
+    </div>
+    <p id="nice">Nice!</p>
+    <p id="tryAgain">Try again!</p>
+    <button id="button">Start</button>
+    <input id="input" type="text" placeholder="Type name of vegetable/fruit">
+    <button id="check">Check</button>
+    
+    <script>
+        
+        let cardName
+        let thingName
+        // if(i == 0) {
+            $("#button").click(function(){
+                cardName = null
+                thingName = null
+            $("#nice").css({'display': 'none'})
+            $("#button").css({"display": "none"})   
+
+            $("#tryAgain").css({'display': 'none'})
+            let number = Math.floor(Math.random()*5) 
+            console.log(number)
+            $('.imgDiv').css({'display': 'block'})
+            thingName = "#" + "card" + number 
+            setTimeout(() => {
+                $(thingName).css({'display': 'none'})
+                $("#check").css({"display": "block"}) 
+            $("#input").css({"display": "block"}) 
+            }, 3000);
+            console.log($(thingName).attr('class').slice(7));
+            cardName = $(thingName).attr('class').slice(7)
+
+        })
+        
+        $("#check").click(function() {
+            // console.log("LLLLLLL" + cardName + $("#input").val());
+            $("#button").css({"display": "none"}) 
+            if ($("#input").val() == cardName) {
+            $("#button").css({"display": "block", "width": "80px", "height": "80px"}) 
+            $("#nice").css({'display': 'block'})
+            $(thingName).css({'display': 'block'})
+        } else {
+            $("#button").css({"display": "block", "width": "80px", "height": "80px"}) 
+            $('.imgDiv').css({'display': 'block'})
+            $("#tryAgain").css({'display': 'block'})
+            $("#button").css({"display": "block"}) 
+
+        }
+        })
+
+
+
+        
+    </script>
+</body>
+</html>
